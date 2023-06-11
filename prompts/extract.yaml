@@ -1,0 +1,23 @@
+extract:
+  prompt: |-
+    You are an expert doing entity extraction. 
+    Please extract from the text the the entity value that corresponds to a key.
+    If the information is not present, respond with an empty string. 
+
+    [BEGIN DATA]
+    ************
+    [Text]: {text}
+    ************
+    [Key]: {keyword}
+    [END DATA]
+    ************
+
+    Follow these instructions:
+    1. Extract verbatim.
+    2. Don't add anything else after the extraction.
+
+    [Description]:
+
+  choice_strings: ABCDE
+  input_outputs:
+    input: completion

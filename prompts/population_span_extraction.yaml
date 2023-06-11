@@ -1,0 +1,16 @@
+extract:
+  prompt: |-
+    I want to know how this abstract defines the Population Demographics. Please extract the sections in the abstract that define the demographics.
+
+    [BEGIN DATA]
+    ************
+    [Text]: {text}
+    ************
+    [END DATA]
+    ************
+
+    [Definition]:
+
+  choice_strings: ABCDE
+  input_outputs:
+    input: completion
