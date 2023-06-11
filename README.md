@@ -10,7 +10,7 @@ Lightweight framework to evaluate LLM using model scoring methods
 
 ### Task-oriented
 
-autograde has a simple interface to define tasks, which helps to easily bring your real-world applications. 
+Tasks give you flexibility to test your custom flows. For example, you can easily add a retrieval step before inference.
 
 ```py
 from autograde.tasks.base import Task
@@ -18,22 +18,13 @@ from autograde.tasks.base import Task
 class MyTask(Task):
     '''Task classes override two simple methods
     '''
-    def get_input()
+    def get_input():
         # logic to inputs 
 
-    def test_output()
+    def test_output():
         # logic to evaluate model outputs
 ```
 
-Gets task type and data from args 
-| -- /data/sample.jsonl 
-Runs model task 
-| -- Get task logic from /tasks/<task_type>.py
-| -- Get prompt from /prompts/<task_type>.yaml
-Gets model grader 
-| -- Get prompt from config /graders/<grader_type>.yaml
-Grade the model output
-Save metrics
 
 ### Decoupled sampling from scoring 
 
@@ -60,4 +51,4 @@ python run.py \
     --task_end_idx 1
 ```
 
-Add examples
+TODO: Add sample outputs 
