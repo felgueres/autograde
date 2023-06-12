@@ -10,7 +10,7 @@ Lightweight framework to evaluate LLM using model scoring methods
 
 ### Task-oriented
 
-Tasks give you flexibility to test your custom flows.**** 
+Tasks give you flexibility to test your custom flows.
 
 ```py
 from autograde.tasks.base import Task
@@ -28,7 +28,8 @@ class MyTask(Task):
 
 ### Decoupled sampling from scoring 
 
-autograde is focused on using models to score outputs. The model used for sampling and evaluating can be different so you can use a bigger model at sampling and smaller for evals. 
+autograde is focused on using models to score outputs. 
+The model used for sampling can be different than the one used to evaluate. 
 
 ## Quickstart 
 
