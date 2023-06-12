@@ -53,11 +53,17 @@ $ python run.py \
 
 Here's the output to the task, which is extracting demographics from a medical abstract and evaluating against an expert's answer.
 
-================
-Model Completion
-================
+============
+Model Answer 
+============
 
-['The abstract defines the Population Demographics as patients with a baseline IOP > or = 24 mm Hg, who were randomized to either the 2% dorzolamide/0.5% timolol combination eye drops twice daily (n = 273) or 0.005% latanoprost eye drops once daily (n = 271). A total of 259 patients in the dorzolamide/timolol group and 268 patients in the latanoprost group were included in the efficacy analysis. These patients had ocular hypertension or glaucoma.'] 
+The abstract defines the Population Demographics as patients with a baseline IOP > or = 24 mm Hg, who were randomized to either the 2% dorzolamide/0.5% timolol combination eye drops twice daily (n = 273) or 0.005% latanoprost eye drops once daily (n = 271). A total of 259 patients in the dorzolamide/timolol group and 268 patients in the latanoprost group were included in the efficacy analysis. These patients had ocular hypertension or glaucoma.
+
+=============
+Expert answer
+=============
+
+In the abstract, population demographics are defined by the following spans: 'Patients with a baseline IOP > or = 24 mm Hg
 
 =================
 Model Grade Ouput
