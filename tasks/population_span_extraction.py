@@ -31,7 +31,7 @@ class PopulationSpanExtractionTask(Task):
         super().__init__()
         path = os.path.join(DATA_PATH, file)
         self.data = open(path, 'r').readlines()
-        self.stops = ['\nPassages:\n', None]
+        self.stops = [None]
     
     def get_input(self, idx: int) -> str:
         return json.loads(self.data[idx])['input']
@@ -48,6 +48,7 @@ class PopulationSpanExtractionTask(Task):
         scores = []
         r = 0
         for score_output in score_outputs:
+            print('Model scorer: \n********\n', score_output, '\n********\n')
             lines = score_output.split('\n')
             for line in lines:
                 line = line.strip()

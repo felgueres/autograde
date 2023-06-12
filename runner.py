@@ -37,7 +37,9 @@ def run(args):
 
     for i in range(args.task_start_idx, args.task_end_idx):
         ys,info = solve(args, task, i)
+        print('Completion: \n********\n', ys, '\n********\n')
         infos = [task.test_output(i,y) for y in ys]
+        print('Eval info: \n********\n', infos, '\n********\n')
         info.update({'idx': i, 'ys': ys, 'infos': infos})
         logs.append(info)
         with open(file, 'w') as f:
@@ -47,11 +49,6 @@ def run(args):
         accs = [info['r'] for info in infos]
         cnt_avg += sum(accs) / len(accs)
         cnt_any += any(accs)
-        print(f'Finished running task {i} with accuracy {sum(accs) / len(accs)}')
-        print(f'Summary: {json.dumps(info, indent=2)}')
-    
-    n = args.task_end_idx - args.task_start_idx
-    print(f'Finished running {n} tasks.')
 
 def parse_args():
     args = argparse.ArgumentParser()
@@ -70,4 +67,5 @@ def parse_args():
 
 if __name__ == '__main__':
     args = parse_args()
+    print('Running with args:', args)
     run(args)

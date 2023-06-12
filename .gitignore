@@ -1,4 +1,6 @@
-/data
+
+data/*
+!data/sample.jsonl
 /logs
 *__pycache__
 .env

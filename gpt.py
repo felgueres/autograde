@@ -29,6 +29,5 @@ def chatgpt(messages, model="gpt-3.5-turbo", temperature=0.5, max_tokens=1000, n
         cnt = min(n, 20)
         n -= cnt
         res = completions_with_backoff(model=model, messages=messages, temperature=temperature, max_tokens=max_tokens, stop=stop, n=cnt)
-        print(res)
         outputs.extend([choice['message']['content'] for choice in res['choices']])
     return outputs
